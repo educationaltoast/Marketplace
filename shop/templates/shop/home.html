@@ -1,0 +1,24 @@
+{% extends "shop/base.html" %}
+
+{% block head %}
+    {% load static %}
+{% endblock %}
+
+{% block content %}
+
+<ul class="list-group">
+
+    {% for object in object_list %}
+        <li class="list-group-item">
+            <a href="{{ object.pk }}"> {{object.name }} </a>
+            <p>{{ object.pk }}</p>
+            <img src="{{ object.image.url }}" alt="Your image" width="200" height="150">
+        </li>
+
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}
+

@@ -1,0 +1,7 @@
+{% extends "shop/base.html" %}
+
+{% block content %}
+    <p>PK of item: {{ object.pk }}</p>
+    <p>{{ object.name }}</p>
+    <img src="{{ object.image.url }}" alt="Your image" width="200" height="150">
+{% endblock %}
